@@ -13,7 +13,7 @@ inquirer
     },
     {
         type: 'input',
-        name: ' textColor',
+        name: 'textColor',
         message: 'What color would you like your text to be?',
     },
     {

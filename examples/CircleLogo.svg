@@ -1,0 +1,5 @@
+
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle r="80" cx="150" cy="100" fill="orange" />
+        <text x="150" y="115" text-anchor="middle" dy=".3em" fill="red" font-size="40">boo</text>
+        </svg>
