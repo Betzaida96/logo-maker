@@ -8,7 +8,8 @@ inquirer
     {
       type: 'input',
       name: 'logoText',
-      message: 'Enter up to 3 characters',  
+      message: 'Enter up to 3 characters',
+      validate: input => input.length <= 3 || 'Text must be 3 characters or less.'
     },
     {
         type: 'input',
@@ -38,13 +39,12 @@ inquirer
     }
 
     shape.setColor(shapeColor);
+    shape.textColor = textColor;
+    shape.logoText = logoText;
 
-    const svgContent = `
-    ${shape.render()}
-    <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="${textColor}" font-size="20">${logoText}</text>
-    `;
+    const svgContent = shape.render();
 
     fs.writeFileSync('logo.svg', svgContent);
 
-    console.log('Generated logo.svg')
+    console.log('Generated logo.svg');
 });
